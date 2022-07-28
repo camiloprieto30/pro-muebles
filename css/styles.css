@@ -1,0 +1,197 @@
+/*seccion de index*/
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    /* border: solid black;*/
+}
+
+.logo {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    margin-top: 20px;
+}
+
+.tablero li {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-top: 50px;
+    font-size: 20px
+}
+
+.tablero li a {
+    text-decoration: none;
+    color: aqua;
+
+}
+
+.tarjeta {
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* border: solid black;*/
+}
+
+.int {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.pie {
+    /*border: solid black;*/
+}
+
+#menu {
+    display: grid;
+    grid-template-areas:
+        "cuadro espacio"
+        "cuadro espacio"
+        "texto texto"
+        "pie pie";
+
+    grid-template-rows: 656px 70px;
+    grid-template-columns: 15% auto;
+}
+
+header {
+    grid-area: cuadro;
+}
+
+div {
+    grid-area: espacio;
+}
+
+footer {
+    grid-area: pie;
+}
+
+p {
+    grid-area: texto;
+}
+
+@media screen and (max-width : 768px) {
+    #menu {
+
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+        grid-template-areas:
+            "cuadro espacio"
+            "cuadro espacio"
+            "texto texto"
+            "pie pie";
+    }
+
+    /* */
+    .tarjeta {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    #menu {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas:
+            "cuadro "
+            "espacio"
+            "texto "
+            "pie";
+    }
+
+}
+
+/* seccion de productoss*/
+.cat {
+    width: 300px;
+    height: 230px;
+    margin-top: 20px;
+    margin-bottom: 35px;
+    margin-left: 10px;
+}
+
+p {
+    color: blueviolet;
+    font-family: cursive;
+    text-align: left;
+    font-size: large;
+    font-weight: 100;
+    letter-spacing: 2px;
+    font-stretch: extra-expanded;
+}
+
+#catalogo {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-bottom: 50px;
+    grid-area: catalogo;
+}
+
+#pro1 {
+    display: grid;
+    grid-template-areas:
+        "cuadro catalogo"
+        "cuadro catalogo"
+        "pie pie";
+    grid-template-columns: 15% auto;
+    grid-template-rows: 1430px 1fr 70px;
+}
+
+
+@media screen and (max-width : 768px) {
+    #pro1{
+
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+        grid-template-areas:
+            "cuadro catalogo"
+            "cuadro catalogo"
+            "texto texto"
+            "pie pie";
+    }
+
+}
+
+@media screen and (max-width: 420px) {
+    #pro1 {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas:
+            "cuadro "
+            "catalogo"
+            "texto "
+            "pie";
+    }
+
+}
+
+
+/*seccion de promociones*/
+#promos {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.porce {
+    margin-top: 40px;
+    margin-left: 40px;
+}
+
+/*seccion quines somos*/
+.quien {
+    font-family: cursive;
+    font-size: 20px;
+    font-style: italic;
+}
+
+/*seccion contacto*/
+.formulario {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
